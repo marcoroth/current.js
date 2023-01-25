@@ -31,5 +31,8 @@
   "env": {
     "browser": true,
     "node": true
+  },
+  "globals": {
+    "Current": true  
   }
 }
