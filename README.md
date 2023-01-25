@@ -24,8 +24,6 @@ Alternatively, you can import the `Current` object directly:
 import { Current } from "current.js"
 ```
 
-**Please note:** if you use the constant import the function will not be globally available and you have to access all values via the constant.
-
 ## Usage
 
 To use `current.js`, you need to add `<meta>` elements to the `<head>` section of your HTML document, with the `name` attribute starting with `current-`:
