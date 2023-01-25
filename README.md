@@ -1,6 +1,25 @@
+
+<h1 align="center">Current.js</h1>
+
+<p align="center">
+  <a href="https://github.com/marcoroth/current.js">
+    <img src="https://github.com/marcoroth/current.js/actions/workflows/tests.yml/badge.svg">
+  </a>
+  <a href="https://www.npmjs.com/package/current.js">
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/current.js?logo=npm&color=38C160">
+  </a>
+  <a href="https://www.npmjs.com/package/current.js">
+    <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/current.js?logo=npm&color=38C160">
+  </a>
+  <a href="https://bundlephobia.com/package/current.js">
+    <img alt="NPM Bundle Size" src="https://img.shields.io/bundlephobia/minzip/current.js?label=bundle%20size&logo=npm">
+  </a>
+</p>
+
+
 ## Introduction
 
-`current.js` is a tiny 🤏 JavaScript library (only 283 bytes when compressed) that allows you to access data stored in "current" HTML `<meta>` elements.
+`current.js` is a tiny 🤏 JavaScript library (only 379 bytes) that allows you to access data stored in "current" HTML `<meta>` elements.
 
 ## Installation
 
