@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 `current.js` is a tiny 🤏 JavaScript library (only 283 bytes when compressed) that allows you to access data stored in "current" HTML `<meta>` elements.
 
@@ -12,7 +12,7 @@ yarn add current.js
 
 Then, in the JavaScript file where you want to use `current.js` (usually `application.js`), add the following line of code:
 
-```diff
+```js
 import "current.js"
 ```
 
@@ -23,6 +23,8 @@ Alternatively, you can import the `Current` object directly:
 ```js
 import { Current } from "current.js"
 ```
+
+**Please note:** if you use the constant import the function will not be globally available and you have to access all values via the constant.
 
 ## Usage
 
@@ -56,8 +58,6 @@ If the name you requested is not found, it will return an empty object
 Current.foo
 // => {}
 ```
-
-Please note that if you use the constant import the function will not be globally available and you have to access it via the constant.
 
 ## Development
 
