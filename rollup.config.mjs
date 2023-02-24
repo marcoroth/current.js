@@ -21,7 +21,7 @@ export default [
       },
       {
         file: "dist/current.js",
-        format: "es",
+        format: "esm",
       },
     ],
     plugins: [resolve(), typescript(), filesize(), minify()],
