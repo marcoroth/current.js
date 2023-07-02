@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Current.js Playground</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <meta name="current-environment" content="production">
     <meta name="current-user-id" content="123">
     <meta name="current-user-time-zone-name" content="Central Time (US & Canada)">
 
     <script type="module" src="/index.js"></script>
-  </head>
 
-  <body></body>
+    <script type="module">
+      Current.environment
+      // => "production"
+
+      Current.user
+      // => { id: "123", timeZoneName: "Central Time (US & Canada)" }
+
+      Current.foo
+      // => {}
+    </script>
+  </head>
 </html>
