@@ -1,4 +1,3 @@
-
 <h1 align="center">Current.js</h1>
 
 <p align="center">
@@ -19,7 +18,7 @@
 
 ## Introduction
 
-`current.js` is a tiny 🤏 JavaScript library (only 379 bytes) that allows you to access data stored in "current" HTML `<meta>` elements.
+`current.js` is a tiny 🤏 JavaScript library (only 410 bytes) that allows you to access data stored in "current" HTML `<meta>` elements.
 
 ## Installation
 
