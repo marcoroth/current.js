@@ -131,13 +131,22 @@ describe("Current.js", () => {
     })
   })
 
-  context("with custom prefix", () => {
+  context("with prefix config", () => {
     it("should handle custom prefix", async () => {
       await meta(`<meta name="current-environment" content="development">`)
       await meta(`<meta name="config-environment" content="production">`)
 
       assert.equal(Current.environment, "development")
       config.prefix = "config"
+      assert.equal(Current.environment, "production")
+    })
+
+    it("should handle no prefix", async () => {
+      await meta(`<meta name="current-environment" content="development">`)
+      await meta(`<meta name="environment" content="production">`)
+
+      assert.equal(Current.environment, "development")
+      config.prefix = null
       assert.equal(Current.environment, "production")
     })
   })
