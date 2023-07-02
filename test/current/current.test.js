@@ -1,11 +1,12 @@
 import { assert } from "@open-wc/testing"
 import { meta, metaCleanup } from "../test_helpers"
 
-import { Current } from "../../"
+import { Current, config } from "../../"
 
 describe("Current.js", () => {
   afterEach(() => {
     metaCleanup()
+    config.prefix = "current"
   })
 
   context("undefined", () => {
@@ -127,6 +128,26 @@ describe("Current.js", () => {
       assert.equal(Current.user.id, "Current ID")
       assert.equal(Current.user.name, "Current Name")
       assert.equal(Current.user.email, "Current Email")
+    })
+  })
+
+  context("with prefix config", () => {
+    it("should handle custom prefix", async () => {
+      await meta(`<meta name="current-environment" content="development">`)
+      await meta(`<meta name="config-environment" content="production">`)
+
+      assert.equal(Current.environment, "development")
+      config.prefix = "config"
+      assert.equal(Current.environment, "production")
+    })
+
+    it("should handle no prefix", async () => {
+      await meta(`<meta name="current-environment" content="development">`)
+      await meta(`<meta name="environment" content="production">`)
+
+      assert.equal(Current.environment, "development")
+      config.prefix = null
+      assert.equal(Current.environment, "production")
     })
   })
 })
