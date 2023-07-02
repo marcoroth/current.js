@@ -76,6 +76,47 @@ Current.foo
 // => {}
 ```
 
+## Configuration
+
+#### Custom Prefix
+
+The `prefix` property on `config` can be used to customize the prefix used to lookup the `<meta>` tags.
+
+```js
+import { config } from "current.js"
+config.prefix = "config"
+```
+
+```html
+<meta name="current-environment" content="development">
+<meta name="config-environment" content="production">
+```
+
+Calling `Current.environment` would now look for the meta tag with the `config-environment` name.
+
+```js
+Current.environment
+// => "production"
+```
+
+
+#### No Prefix
+
+You can also configure `current.js` to use no `prefix` if you set the `prefix` to `null`.
+
+```js
+import { config } from "current.js"
+config.prefix = null
+```
+
+```html
+<meta name="current-environment" content="development">
+<meta name="environment" content="production">
+```
+
+Calling `Current.environment` would also return `"production"` in this case.
+
+
 ## Development
 
 To run the test runner:
