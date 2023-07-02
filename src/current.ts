@@ -6,7 +6,7 @@ type CurrentValue = string | CurrentValueObject
 const currentProxy = {
   get(_target: object, propertyName: string): CurrentValue {
     const result: CurrentValueObject = {}
-    const prefix = `current-${propertyName}`
+    const prefix = `${config.prefix}-${propertyName}`
 
     const exact = document.head.querySelector<HTMLMetaElement>(`meta[name=${prefix}]`)
     const startsWith = Array.from(document.head.querySelectorAll<HTMLMetaElement>(`meta[name^=${prefix}-]`))
@@ -26,3 +26,6 @@ const currentProxy = {
 }
 
 export const Current = new Proxy({}, currentProxy)
+export const config = {
+  prefix: "current"
+}
