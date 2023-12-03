@@ -9,17 +9,17 @@ const currentProxy = {
     const prefix = config.prefix ? `${config.prefix}-` : ""
     const metaName = `${prefix}${propertyName}`
 
-    const exact = document.head.querySelector<HTMLMetaElement>(`meta[name=${metaName}]`)
-    const startsWith = Array.from(document.head.querySelectorAll<HTMLMetaElement>(`meta[name^=${metaName}-]`))
+    const startsWith = document.head.querySelectorAll<HTMLMetaElement>(`meta[name^=${metaName}-]`)
 
     if (startsWith.length > 0) {
-      for (const { name, content } of startsWith) {
+      startsWith.forEach(({ name, content }) => {
         const key = camelize(name.slice(metaName.length + 1))
-        if (result[key]) continue
+        if (result[key]) return
         result[key] = content
-      }
-    } else if (exact) {
-      return exact.content
+      })
+    } else {
+      const exact = document.head.querySelector<HTMLMetaElement>(`meta[name=${metaName}]`)
+      if (exact) return exact.content
     }
 
     return result
