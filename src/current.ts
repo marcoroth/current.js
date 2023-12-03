@@ -17,12 +17,11 @@ const currentProxy = {
         if (result[key]) return
         result[key] = content
       })
-    } else {
-      const exact = document.head.querySelector<HTMLMetaElement>(`meta[name=${metaName}]`)
-      if (exact) return exact.content
+      return result
     }
 
-    return result
+    const exact = document.head.querySelector<HTMLMetaElement>(`meta[name=${metaName}]`)
+    return (exact && exact.content) || result
   },
 }
 
