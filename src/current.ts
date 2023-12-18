@@ -21,7 +21,7 @@ const currentProxy = {
     }
 
     const exact = document.head.querySelector<HTMLMetaElement>(`meta[name=${metaName}]`)
-    return (exact && exact.content) || result
+    return exact ? exact.content : result
   },
 }
 
