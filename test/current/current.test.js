@@ -67,7 +67,7 @@ describe("Current.js", () => {
       await meta(`<meta name="current-user-first-name" content="Current First Name" />`)
       await meta(`<meta name="current-user-last-name" content="Current Last Name" />`)
       await meta(
-        `<meta name="current-user-some-really-long-dasherized-name" content="Current Some Really Long Dasherized Name" />`
+        `<meta name="current-user-some-really-long-dasherized-name" content="Current Some Really Long Dasherized Name" />`,
       )
 
       assert.equal(Current.user.firstName, "Current First Name")
@@ -79,7 +79,7 @@ describe("Current.js", () => {
       await meta(`<meta name="current-author-firstName" content="Current First Name" />`)
       await meta(`<meta name="current-author-lastName" content="Current Last Name" />`)
       await meta(
-        `<meta name="current-author-someReallyLongDasherizedName" content="Current Some Really Long Dasherized Name" />`
+        `<meta name="current-author-someReallyLongDasherizedName" content="Current Some Really Long Dasherized Name" />`,
       )
 
       assert.equal(Current.author.firstName, "Current First Name")
