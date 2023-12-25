@@ -3754,14 +3754,7 @@ rollup-plugin-filesize@^10.0.0:
     pacote "^15.1.1"
     terser "^5.6.0"
 
-rollup@^3.26.0:
-  version "3.26.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.26.0.tgz#9f2e0316a4ca641911cefd8515c562a9124e6130"
-  integrity sha512-YzJH0eunH2hr3knvF3i6IkLO/jTjAEwU4HoMUbQl4//Tnl3ou0e7P5SjxdDr8HQJdeUJShlbEHXrrnEHy1l7Yg==
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-rollup@^4.4.0:
+rollup@^4.4.0, rollup@^4.9.1:
   version "4.9.1"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-4.9.1.tgz#351d6c03e4e6bcd7a0339df3618d2aeeb108b507"
   integrity sha512-pgPO9DWzLoW/vIhlSoDByCzcpX92bKEorbgXuZrqxByte3JFk2xSW2JEeAcyLc9Ru9pqcNNW+Ob7ntsk2oT/Xw==
