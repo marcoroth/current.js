@@ -23,7 +23,7 @@
     "format": "yarn lint --fix"
   },
   "devDependencies": {
-    "@open-wc/testing": "^3.2.0",
+    "@open-wc/testing": "^4.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^11.1.2",
