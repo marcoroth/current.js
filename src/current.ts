@@ -2,6 +2,7 @@ import { camelize } from "./util"
 
 type CurrentValueObject = { [key: string]: string }
 type CurrentValue = string | CurrentValueObject
+type CurrentType = { [key: string]: CurrentValue | undefined }
 
 const currentProxy = {
   get(_target: object, propertyName: string): CurrentValue {
@@ -25,7 +26,7 @@ const currentProxy = {
   },
 }
 
-export const Current = new Proxy({}, currentProxy)
+export const Current: CurrentType = new Proxy({}, currentProxy)
 export const config = {
   prefix: "current",
 }
