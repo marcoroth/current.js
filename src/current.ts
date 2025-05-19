@@ -1,8 +1,9 @@
 import { camelize } from "./util"
 
-type CurrentValueObject = { [key: string]: string }
-type CurrentValue = string | CurrentValueObject
-type CurrentType = { [key: string]: CurrentValue | undefined }
+export type CurrentValueLiteral = string | undefined
+export type CurrentValueObject = { [key: string]: CurrentValueLiteral }
+export type CurrentValue = CurrentValueLiteral | CurrentValueObject
+export type CurrentType = { [key: string]: CurrentValue | undefined }
 
 const currentProxy = {
   get(_target: object, propertyName: string): CurrentValue {
