@@ -1,6 +1,6 @@
 {
   "name": "current.js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "On-demand JavaScript objects from 'current' HTML <meta> elements",
   "main": "dist/current.js",
   "module": "dist/current.js",
